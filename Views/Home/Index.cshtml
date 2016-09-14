@@ -32,10 +32,10 @@
         In <strong>Program.cs</strong>
     </p>
 
-    <ul>
+        <ul>
         <li>
             <p>
-                Add UseUrls method and pass args[0] as parameter to start your app. Because Heroku web dyno will start with dynamic port after sucessful deployment. We need to use the same port in code behind also then only your app will start and listen on that port else dotnet runtime will set default port 5000. Thereby we pass port number as parameter with url in Procfile
+                Make changes in main Method by adding the Add UseUrls method and pass args[0] as parameter to start your app. We need to use the same port in code behind also then only your app will start and listen on that port else dotnet runtime will set default port 5000.
                 <br>
                 public static void Main(string[] args
                 {<br>
@@ -56,9 +56,9 @@
                 In <strong>project.json</strong>
             </p>
         </li>
-        <li><p>Add a new property called "outputName": "Your_ProjectName" in buildOptions  </p></li>
+        <li><p>Now, add a new property called "outputName": "Your_ProjectName" in buildOptions  </p></li>
         <li>
-            Remove scripts section. It has prepublish and postpublish actions which are not needed
+            Finally, remove scripts section. It has prepublish and postpublish actions which are not needed
             <br>
             <br>
         </li>
